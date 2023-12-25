@@ -1,0 +1,38 @@
+[
+    {
+      "company": "IBM(大连)",
+      "position": "应用程序架构工程师/全栈工程师",
+      "during": "2022/03--至今",
+      "content": "1.基于Spring Boot实现微服务系统的基础架构：统一的请求响应，统一异常处理，URL请求限流，系统日志，认证与授权，国际化，状态流控制，链路追踪等。!@#2.使用Vue3+Typescript实现前端基础框架：基于AXIOS的http请求，国际化，异常处理，用户状态保持，共通组件等。!@#3.基于React实现前端框架：自定义http请求，国际化等。"
+    },
+    {
+      "company": "思佰益必智信息技术(大连)有限公司",
+      "position": "高级软件工程师/PL",
+      "during": "2019/04--2022/02",
+      "content": "1.Review组员的前后端代码。!@#2.参与实现公司证券交易系统的重构。!@#3.参与实现用户对账单的分布式打印系统。!@#4.参与实现微服务系统架构的基础设施：统一请求和响应及调用上下文，链路追踪，统一异常处理，国际化等。"
+    },
+    {
+      "company": "日立咨询信息技术(广州)有限公司",
+      "position": "高级软件工程师",
+      "during": "2016/07--2019/03",
+      "content": "1.实现国内顶级公司的内部PFM系统的需求功能：热部署，自动代码生成，性能优化，设计开发方案，设计spring boot，spring cloud微服务方案等。!@#2.客户支付系统的功能升级，优化，及与其他外部系统的对接。"
+    },
+    {
+      "company": "深圳市怡亚通供应链股份有限公司",
+      "position": "高级软件工程师",
+      "during": "2013/03--2016/06",
+      "content": "1.编写IOS、Android 手机APP的后端Api接口程序，并测试。!@#2.开发并维护公司B2B系统网站。 !@#3.修改ERP系统系统BUG。!@#4.使用springMVC实现电子商务平台，与支付宝整合。"
+    },
+    {
+      "company": "IBM",
+      "position": "高级软件工程师",
+      "during": "2012/03--2013/02",
+      "content": "1.使用SOA,SCA系统架构，Websphere Application Server作为服务器，以Websphere RSA为开发工具，以WMB来整合各种服务，为全球客户提供服务。"
+    },
+    {
+      "company": "北大青鸟大连鑫鼎中心",
+      "position": "培训讲师",
+      "during": "2008/06--2012/02",
+      "content": "讲授如下课程，并带学员根据软件开发瀑布模型进行项目实训： !@#1.程序框架：Struts1.2、Struts2.0、Spring、Hibernate、DWR。!@#2.设计模式：MVC、单例模式、简单工厂、抽象工厂、观察者模式、代理模式。!@#3.实用技术：AJAX、JSP、Servlet、JNDI、Web Service、XML、Javascript。!@#4.数据库：Oracle10g、pl/sql、mysql,SQL Server 2005、存储过程、函数、索引、触发器等。!@#5.UML：用例图、业务流程图、类图、时序图等。!@#6.编程工具：Eclipse、MyEclipse、CVS、JUnit。"
+    }
+]

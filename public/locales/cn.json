@@ -1,0 +1,23 @@
+{
+  "app_title": "韩洪亮个人简历",
+  "menu":{
+    "home":"基本情况",
+    "work_history":"工作经历",
+    "project_experience":"项目经验",
+    "speech":"Speech",
+    "java":"Java",
+    "nextjs":"Nextjs",
+    "react":"React",
+    "vue":"Vue"
+  },
+  "info":{
+    "name":"姓名：",
+    "mobile":"电话：",
+    "email":"邮件：",
+    "education":"学历：",
+    "skills":"主要技能：",
+    "selfassessment":"自我评价：",
+    "certification":"云认证：",
+    "language":"语言能力："
+  }
+}
