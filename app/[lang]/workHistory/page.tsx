@@ -1,10 +1,9 @@
 import * as React from 'react';
 import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
-// import Typography from '@mui/material/Typography';
 import ContentCard from '../components/ContentCard';
-import { getWorkHistory } from '@/app/api/route';
 import { Locale } from '@/i18n-config'
+import { getWorkHistory } from '@/utils/jsonHelper';
 
 
 export default async function WorkHistoryPage({
@@ -12,9 +11,8 @@ export default async function WorkHistoryPage({
 }: Readonly<{
     params: { lang: Locale }
 }>) {
-    const data = await getWorkHistory(lang)
-    const historyList = JSON.parse(data);
 
+    const historyList = await getWorkHistory(lang)
     return (
         <Container>
             <Box
