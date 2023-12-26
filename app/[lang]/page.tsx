@@ -1,40 +1,29 @@
-// 'use client';
 import * as React from 'react';
-import { Paper, Table, TableBody, TableCell, TableContainer, TableRow, Typography } from '@mui/material';
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableRow from '@mui/material/TableRow';
+import Paper from '@mui/material/Paper';
 import Image from 'next/image'
 import { Locale } from '@/i18n-config'
 import { getLocale } from '@/get-locale';
-import { getPersonInfo } from '../api/route';
 import profilePic from '../../public/hhl.png'
+import { getPersonInfo } from '@/utils/jsonHelper';
 
 
 export default async function Home({
-  params: { lang },
+  params: { lang = "jp" },
 }: Readonly<{
   params: { lang: Locale }
 }>) {
 
   const dictionary = await getLocale(lang)
-  const data = await getPersonInfo(lang)
-  const info = JSON.parse(data);
+  const info = await getPersonInfo(lang)
 
   return (
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 700 }} aria-label="spanning table">
-        {/* <TableHead>
-            <TableRow>
-              <TableCell align="center" colSpan={3}>
-                Details
-              </TableCell>
-              <TableCell align="right">Price</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>Desc</TableCell>
-              <TableCell align="right">Qty.</TableCell>
-              <TableCell align="right">Unit</TableCell>
-              <TableCell align="right">Sum</TableCell>
-            </TableRow>
-          </TableHead> */}
         <TableBody>
           <TableRow>
             <TableCell width="12%" align="right" className='p-0 text-lg'>{dictionary.info.name}</TableCell>
