@@ -1,8 +1,7 @@
 import * as React from 'react';
 import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
-import ContentCard from '../components/ContentCard';
-import { getProjectExperience } from '@/app/api/route';
+// import ContentCard from '../components/ContentCard';
 import { Locale } from '@/i18n-config'
 
 
@@ -11,8 +10,6 @@ export default async function WorkHistoryPage({
 }: Readonly<{
     params: { lang: Locale }
 }>) {
-    const data = await getProjectExperience(lang)
-    const experienceList = JSON.parse(data);
 
     return (
         <Container>
@@ -33,7 +30,7 @@ export default async function WorkHistoryPage({
                         text={item.responsibility}
                     />)
                 })} */}
-                java
+                building...
             </Box>
         </Container>
     );
