@@ -2,8 +2,8 @@ import * as React from 'react';
 import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 import ContentCard from '../components/ContentCard';
-import { getProjectExperience } from '@/app/api/route';
 import { Locale } from '@/i18n-config'
+import { getProjectexperience } from '@/utils/jsonHelper';
 
 
 export default async function WorkHistoryPage({
@@ -11,8 +11,8 @@ export default async function WorkHistoryPage({
 }: Readonly<{
     params: { lang: Locale }
 }>) {
-    const data = await getProjectExperience(lang)
-    const experienceList = JSON.parse(data);
+
+    const experienceList = await getProjectexperience(lang)
 
     return (
         <Container>
