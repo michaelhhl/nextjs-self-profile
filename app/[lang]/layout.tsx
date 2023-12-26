@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import './globals.css'
 import * as React from 'react';
 import Link from 'next/link';
@@ -18,9 +17,6 @@ import DashboardIcon from '@mui/icons-material/Dashboard';
 import HomeIcon from '@mui/icons-material/Home';
 import StarIcon from '@mui/icons-material/Star';
 import ChecklistIcon from '@mui/icons-material/Checklist';
-import SettingsIcon from '@mui/icons-material/Settings';
-import SupportIcon from '@mui/icons-material/Support';
-import LogoutIcon from '@mui/icons-material/Logout';
 import ThemeRegistry from './components/ThemeRegistry/ThemeRegistry';
 import { Locale, i18n } from '@/i18n-config'
 import LocaleSwitcher from './components/LocaleSwitcher';
@@ -30,8 +26,6 @@ import { AutoAwesomeMosaic, AutoAwesomeMotion, GridOn, Looks, SettingsVoice } fr
 export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }))
 }
-
-const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Personal Profile',
@@ -62,7 +56,7 @@ export default async function RootLayout({
 
   return (
     <html lang={params.lang}>
-      <body className={inter.className}>
+      <body>
         <ThemeRegistry>
           <AppBar position="fixed" color='inherit' component="nav">
             <Toolbar>
@@ -90,7 +84,7 @@ export default async function RootLayout({
           >
             <Divider />
             <List>
-              {LINKS.map(({ text, href, icon: Icon }) => (
+              {LINKS.map(({ text, href, icon: Icon }, index) => (
                 <ListItem key={href} disablePadding>
                   <ListItemButton component={Link} href={href}>
                     <ListItemIcon>
