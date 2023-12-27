@@ -22,6 +22,9 @@ export default async function SpeechPage({
     params: { lang: Locale }
 }>) {
 
+    const title1 = lang === 'cn' ? 'AI模型学习自然语言的过程和我们人类一样吗？' : 'AIモデルは人間と同じように自然言語を学習するのか？'
+    const title2 = lang === 'cn' ? 'AI模型是如何处理自然语言的？' : 'AIモデルは自然言語をどのように処理するのか？'
+    const title3 = lang === 'cn' ? 'AI模型是如何理解语义的？' : 'AIモデルはどのようにセマンティクスを理解するのか？'
     return (
         <Container>
             <Box
@@ -33,57 +36,57 @@ export default async function SpeechPage({
                 }}
             >
                 <ImageContentCard key='speech1'
-                    heading='AI模型学习自然语言的过程和我们人类一样吗？'
+                    heading={title1}
                     text=''
                     imgUrl={speech1}
                 />
                 <ImageContentCard key='speech2'
-                    heading='AI模型是如何处理自然语言的？'
+                    heading={title2}
                     text=''
                     imgUrl={speech2}
                 />
                 <ImageContentCard key='speech3'
-                    heading='AI模型是如何理解语义的？-1'
+                    heading={`${title3}-1`}
                     text=''
                     imgUrl={speech3}
                 />
                 <ImageContentCard key='speech4'
-                    heading='AI模型是如何理解语义的？-2'
+                    heading={`${title3}-2`}
                     text=''
                     imgUrl={speech4}
                 />
                 <ImageContentCard key='speech5'
-                    heading='AI模型是如何理解语义的？-3'
+                    heading={`${title3}-3`}
                     text=''
                     imgUrl={speech5}
                 />
                 <ImageContentCard key='speech6'
-                    heading='AI模型是如何理解语义的？-4'
+                    heading={`${title3}-4`}
                     text=''
                     imgUrl={speech6}
                 />
                 <ImageContentCard key='speech7'
-                    heading='AI模型是如何理解语义的？-5'
+                    heading={`${title3}-5`}
                     text=''
                     imgUrl={speech7}
                 />
                 <ImageContentCard key='speech8'
-                    heading='AI模型是如何理解语义的？-6'
+                    heading={`${title3}-6`}
                     text=''
                     imgUrl={speech8}
                 />
                 <ImageContentCard key='speech9'
-                    heading='AI模型是如何理解语义的？-7'
+                    heading={`${title3}-7`}
                     text=''
                     imgUrl={speech9}
                 />
                 <ImageContentCard key='speech11'
-                    heading='AI模型是如何理解语义的？-8'
+                    heading={`${title3}-8`}
                     text=''
                     imgUrl={speech11}
                 />
                 <ImageContentCard key='speech10'
-                    heading='AI模型学习自然语言的过程和我们人类一样吗？'
+                    heading={title1}
                     text=''
                     imgUrl={speech10}
                 />
