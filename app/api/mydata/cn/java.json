@@ -1,0 +1,62 @@
+[
+    {
+      "question": "统一请求和响应",
+      "solution": "1.定义返回的实体对象ResponseEntity：code，message，data。!@#2.类使用@ControllerAdvice,implements ResponseBodyAdvice。!@#3.开发环境时，返回原始数据对象；集成时，经过网关，带上标记，返回ResponseEntity。!@#4.定义ExceptionHandler类，使用@RestControllerAdvice 拦截各种异常（统一处理异常）。!@#5.在@ExceptionHandler（value=CommonException）方法上，获取异常信息和code，封装成ResponseEntity。"
+    },
+    {
+      "question": "自适应限流",
+      "solution": "常见方法： 令牌，漏桶，计数器。!@#常见方法的问题： 无法根据负载情况，机器性能自动调整流量。!@#自适应限流实现方式：!@#1.使用指数加权平均算法，使数据更加平滑，不受瞬时大流量的影响。cpu = cpu(t-1) * decay + cpu(t) * (1 - decay)。!@#2.滑动窗口方式采集数据 使用环形链表（长度100）保存每100毫秒的流量。"
+    },
+    {
+      "question": "多线程使用不当的问题",
+      "solution": "1.spring中两个service调用同一个业务service，导致A线程log出现B线程数据。解决：修改共通service的scope为prototype。!@#2.多线程条件下service中使用static变量保存数据，A线程保存的值，被B线程修改。解决：改static变量为Threadlocal保存变量。!@#3.多线程打印账票时，根据部店的账号数量，每个线程打印的数量不一致。某个线程打印2万条时，出现out of memory。 pdfbox软件打印。限制directMemory的大小为1G。把2万条数据分页为2千打印一次。"
+    },
+    {
+      "question": "Shell使用的问题",
+      "solution": "1.服务阻塞，没有取回结果，导致误切换。!@#2.Shell中string变量存储长度越界。!@#3.Shell中主线程不能提前结束，否则取不到分线程的执行结果。"
+    },
+    {
+      "question": "Spring中使用请求上下文",
+      "solution": "1.在自定义类MyContextHolder.java中定义静态方法。!@#2.从RequestContextHolder.getRequestAttributes()中获取attributes。!@#3.从attributes.getRequest().getHeader()中获取属性。"
+    },
+    {
+      "question": "国际化",
+      "solution": "1.通过@Configuration，@Bean实例化LocalValidatorFactoryBean中getValidator(final ResourceBoundleMessageSource)方法。!@#2.添加messageSource.addBasenames('i18n/CommonMessages')。!@#3.设置FactoryBean.addValidationMessageSource(messageSource)。!@#4.在controller或service中autoware注入messageSource。"
+    },
+    {
+      "question": "链路追踪-Gateway",
+      "solution": "新建TraceGlobalFilter implements GlobalFilter:!@#1.雪花算法生成traceId和spanId。!@#2.把traceId和spanId放到request header中。!@#新建AuthGlobalFilter implements GlobalFilter(过滤白名单)：!@#1.从header中取出traceId，放入restTemplate。"
+    },
+    {
+      "question": "链路追踪-Service",
+      "solution": "新建TraceInterceptor extends HandlerInterceptorAdapter:!@#1.preHandle（）从request中取出traceId，生成spanId计入mdc和threadlocal中。!@#2.afterCompletion（）清除mdc和threadlocal中数据。!@#新建HeaderRequestInterceptor implements Feign.RequestInterceptor：!@#1.如果request中没有（由MQ或定时器发起调用）traceId，则新建一个，放到header中。"
+    },
+    {
+      "question": "链路追踪-RocketMQ",
+      "solution": "1.自定义ZdyRocketMQAutoConfiguration,import ZdyMessageConverterConfiguration, ZdyListenerContainerConfiguration。!@#2.ZdyAutoConfigurationImportFilter implements AutoConfigurationImportFilter 把RocketMQ原自定义的autoconfiguration去掉。!@#3.自定义ZdyDefaultMQProducer extends TransactionMQProducer 从context holder中取出traceId放到message的tag中。!@#4.ZdyDefaultRocketMQListenerContainer中从message的tag中取出traceId放入requestHolder和mdc中。"
+    },
+    {
+      "question": "使用状态机模式封装简单工作流",
+      "solution": "1.定义Context，Action，State三个类。Context封装Action和State。Action和State使用枚举方式定义。!@#2.赋予Context初始的状态（State）和在此状态下执行的动作（Action）。!@#3.Action在执行动作时可以判断用户权限。!@#4.State根据逻辑变为下一个状态，并返回给Context。"
+    },
+    {
+      "question": "单机版限流器的实现",
+      "solution": "1.实现HandlerInterceptor接口拦截请求，并注入限流器类。!@#2.在限流器中，使用Guava的CacheBuilder创建缓存计数器。!@#3.根据用户名和URL判断是否超过计数器的阈值。"
+    },
+    {
+      "question": "加密/解密数据库密码",
+      "solution": "1.在Application.yml中给spring.datasource.password赋予加密的数据库密码。!@#2.实现EnvironmentPostProcessor接口的postProcessEnvironment方法。!@#3.从ConfigurableEnvironment中获取到加密的密码，解密后重新赋予spring.datasource.password。!@#4.在spring.factories中，添加EnvironmentPostProcessor接口的实现类。"
+    },
+    {
+      "question": "自动读取YAML中的配置",
+      "solution": "1.自定义类继承DefaultPropertySourceFactory。!@#2.实现createPropertySource方法，返回新建的YamlPropertySourceLoader类。!@#3.自定义一个Perperty类，使用注解@PropertySource和@ConfigurationProperties标明yaml文件路径和名称以及前缀。!@#4.在其它类中注入这个Perperty类即可。"
+    },
+    {
+      "question": "使用SpringSecurity+JWT实现认证授权配置",
+      "solution": "1.自定义config类，使用@Configuration注解。!@#2.定义filterchain方法，返回SecurityFilterChain对象。!@#3.配置无状态的session，及默认的cors。!@#4.配置formLogin的成功处理器和失败处理器。!@#5.配置authorizeRequests，设置授权的请求路径，静态资源路径等。!@#6.配置oauth2ResourceServer，设置自定义的jwt转换器。!@#7.配置异常处理器exceptionHandling。!@#8.配置logout。!@#9.自定义类实现UserDetailsService接口，完成用户登录。"
+    },
+    {
+      "question": "单机版生产者/消费者模式的实现",
+      "solution": "1.由三个类组成，Manager，Worker，Task组成。!@#2.Manager类负责接收多任务，存放在LinkedBlockingQueue中。!@#3.Worker类继承Thread，负责从LinkedBlockingQueue中获取任务，并完成任务。!@#4.Task类是具体要实现的任务。"
+    }
+]
