@@ -5,10 +5,10 @@
     "work_history":"工作经历",
     "project_experience":"项目经验",
     "speech":"Speech",
-    "java":"Java",
-    "nextjs":"Nextjs",
-    "react":"React",
-    "vue":"Vue"
+    "java":"Java案例",
+    "nextjs":"Nextjs案例",
+    "react":"React案例",
+    "vue":"Vue案例"
   },
   "info":{
     "name":"姓名：",
