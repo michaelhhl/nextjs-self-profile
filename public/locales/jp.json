@@ -5,10 +5,10 @@
     "work_history":"職業履歴",
     "project_experience":"項目経験",
     "speech":"Speech",
-    "java":"Java",
-    "nextjs":"Nextjs",
-    "react":"React",
-    "vue":"Vue"
+    "java":"Java事例",
+    "nextjs":"Nextjs事例",
+    "react":"React事例",
+    "vue":"Vue事例"
   },
   "info":{
     "name":"名前：",
