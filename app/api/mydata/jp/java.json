@@ -1,0 +1,62 @@
+[
+    {
+      "question": "リクエストと応答の調和",
+      "solution": "1.返されたエンティティオブジェクトResponseEntity:code,message,dataを定義する。!@#2.@ControllerAdvice implements ResponseBodyAdviceを使用します。!@#3.環境が開発されると、元のデータオブジェクトが返され、統合されると、ゲートウェイを通過してマークされ、ResponseEntityが返されます。!@#4.ExceptionHandlerクラスを定義し、@RestControllerAdviceを使用してあらゆる種類の例外をインターセプトします(例外を均一に処理します)。!@#5.@ExceptionHandler(value=CommonException) メソッドで、例外情報とコードを取得し、ResponseEntity にカプセル化します。"
+    },
+    {
+      "question": "適応型調整",
+      "solution": "一般的な方法: トークン、漏洩バケット、カウンター。!@#一般的な方法の問題点： 負荷状況や機械の性能に応じて流量を自動調整することはできません。!@#適応型電流制限:!@#1.指数加重平均アルゴリズムを使用して、データをより滑らかにし、瞬間的な大きなトラフィックの影響を受けないようにします。 cpu = cpu(t-1) * decay + cpu(t) * (1 - decay)。!@#2. スライディングウィンドウでデータを収集する リンクリスト(長さ100)を使用して、100ミリ秒ごとに流量を保存します。"
+    },
+    {
+      "question": "マルチスレッドの不適切な使用",
+      "solution": "1.Spring の 2 つのサービスが同じビジネス サービスを呼び出し、スレッド A がスレッド B のログに表示されます。 修正:共通サービスのスコープをプロトタイプに変更しました。!@#2.マルチスレッドの条件下では、静的変数を使用してデータを保存し、スレッドAによって保存された値はスレッドBによって変更されます。 解決済み: 変数を保存するために、静的変数を Threadlocal に変更しました。!@#3.複数のスレッドでアカウントチケットを印刷する場合、各スレッドで印刷されるアカウントの数が部門のアカウント数に応じて一貫していません。 スレッドが 20,000 個のメッセージを出力すると、メモリ不足が表示されます。 pdfboxソフトウェア印刷。 directMemory のサイズは 1G に制限されています。 20,000個のデータを2,000個にページ分割し、一度印刷します。"
+    },
+    {
+      "question": "シェルの使用に関する問題",
+      "solution": "1.サービスがブロックされ、取得結果がないため、誤ってスイッチオーバーが発生します。!@#2.シェル内の文字列変数の格納長が範囲外です。!@#3.シェルのメインスレッドを早期に終了させることができず、そうしないとサブスレッドの実行結果が得られません。"
+    },
+    {
+      "question": "Spring の要求コンテキスト",
+      "solution": "1.カスタムクラス MyContextHolder.java で静的メソッドを定義します。!@#2.RequestContextHolder.getRequestAttributes() から属性を取得します。!@#3.attributes.getRequest().getHeader()から属性を取得します。"
+    },
+    {
+      "question": "国際化",
+      "solution": "1.@Configurationを使用して、LocalValidatorFactoryBeanのgetValidator(final ResourceBoundleMessageSource)メソッドをインスタンス化@Bean。!@#2.messageSource.addBasenames('i18n/CommonMessages') を追加します。!@#3.FactoryBean.addValidationMessageSource (messageSource) を設定する。!@#4.Autoware がコントローラまたはサービスに messageSource を挿入します。"
+    },
+    {
+      "question": "トレース-Gateway",
+      "solution": "新しいクラスTraceGlobalFilter implements GlobalFilterを新築する:!@#1.スノーフレーク アルゴリズムは、traceIdとspanId を生成します。!@#2.traceIdとspanIdをリクエストヘッダーに入れます。!@#新しいAuthGlobalFilter implements GlobalFilterを創造する：!@#1.ヘッダーから traceId を取り出し、restTemplate に入れます"
+    },
+    {
+      "question": "トレース-Service",
+      "solution": "新しいTraceInterceptor extends HandlerInterceptorAdapter:!@#1.preHandle() は、リクエストから traceId を取り出し、spanId を生成して、それを mdc と threadlocal でカウントします。!@#2.afterCompletion()は、mdcとthreadlocalのデータをクリアします。!@#新しいHeaderRequestInterceptor implements Feign.RequestInterceptor：!@#1.要求(MQまたはタイマーによって開始される)にtraceId がない場合は、新しいtraceIdを作成し、ヘッダーに配置します。"
+    },
+    {
+      "question": "トレース-RocketMQ",
+      "solution": "1.ZdyRocketMQAutoConfiguration,import ZdyMessageConverterConfiguration, ZdyListenerContainerConfigurationをカスタマイズします。!@#2.ZdyAutoConfigurationImportFilter implements AutoConfigurationImportFilter。 RocketMQのオリジナルのカスタムautoconfigurationを削除しました。!@#3.ZdyDefaultMQProducer extends TransactionMQProducerをカスタマイズします。コンテキストホルダーから traceId を取得し、メッセージのタグに入れます。!@#4.ZdyDefaultRocketMQListenerContainerで、messageのターグからtraceIdを取り出し、requestHolderとmdcに配置します。"
+    },
+    {
+      "question": "ステートマシン・パターンを使用したシンプルなワークフローのカプセル化",
+      "solution": "1.Context、Action、Stateクラスを定義する。ContextはActionとStateをカプセル化し、ActionとStateは列挙によって定義される。!@#2.コンテキストに初期状態(State)とその状態で実行するアクション(Action)を与える。!@#3.アクションは、アクション実行時のユーザー権限を判断できる。!@#4.状態はロジックに従って次の状態に変化し、コンテキストに戻る。"
+    },
+    {
+      "question": "独立型電流リミッターの実装",
+      "solution": "1.HandlerInterceptorインターフェイスを実装して、リクエストをインターセプトし、フローリミッタークラスをインジェクトする。!@#2.リミッターで、GuavaのCacheBuilderを使ってキャッシュ・カウンターを作成する。!@#3.ユーザー名とURLに基づいて、カウンターのしきい値を超えているかどうかを判断する。"
+    },
+    {
+      "question": "データベースパスワードの暗号化/復号化",
+      "solution": "1.Application.ymlでspring.datasource.passwordに暗号化されたデータベースパスワードを指定する。!@#2.EnvironmentPostProcessorインタフェースのpostProcessEnvironmentメソッドを実装する。!@#3.暗号化されたパスワードをConfigurableEnvironmentから取得し、復号化してspring.datasource.passwordに再割り当てする。!@#4.spring.factories に EnvironmentPostProcessor インターフェースの実装クラスを追加します。"
+    },
+    {
+      "question": "YAMLから設定を自動的に読み込む",
+      "solution": "1.カスタムクラスはDefaultPropertySourceFactoryを継承します。!@#2.createPropertySource メソッドを実装し、新しく作成された YamlPropertySourceLoader クラスを返します。!@#3.アノテーション@PropertySourceと@ConfigurationPropertiesでPerpertyクラスをカスタマイズし、yamlファイルのパスと名前、プレフィックスを示します。!@#4.他のクラスでは、Perpertyクラスを注入することができます。"
+    },
+    {
+      "question": "SpringSecurity+JWTを使って認証認可設定を実現",
+      "solution": "1.カスタム設定クラスは、@Configurationアノテーションを使用します。!@#2.SecurityFilterChainオブジェクトを返すfilterchainメソッドを定義する。!@#3.ステートレス・セッションとデフォルトのコアを設定する。!@#4.formLoginの成功ハンドラーと失敗ハンドラーを設定する。!@#5.authorizeRequestsを設定し、認証されたリクエストパス、静的リソースパスなどを設定する。!@#6.カスタムjwtコンバータをセットアップするために、oauth2ResourceServerを設定する。!@#7.例外ハンドラexceptionHandlingを設定する。!@#8.ログアウトを設定する。!@#9.ユーザーログインを完了するためのUserDetailsServiceインターフェイスを実装するカスタムクラス。"
+    },
+    {
+      "question": "producer/consumerパターンのスタンドアロン実装",
+      "solution": "1.マネージャー、ワーカー、タスクの3つのクラスで構成される。!@#2.Managerクラスは、LinkedBlockingQueueに格納されたマルチタスクの受信を担当する。!@#3.WorkerクラスはThreadを継承し、LinkedBlockingQueueからタスクを取得して完了させる役割を担う。!@#4.タスククラスは、タスクを達成するための特別なクラスです。"
+    }
+]
