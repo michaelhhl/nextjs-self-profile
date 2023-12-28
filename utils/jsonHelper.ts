@@ -20,3 +20,8 @@ export async function getPersonInfo(lang: Locale) {
   return ret
 }
 
+export async function getJavaSolution(lang: Locale) {
+  const file = await fs.readFile(process.cwd() + `/app/api/mydata/${lang}/java.json`, 'utf8');
+  const ret = JSON.parse(file)
+  return ret
+}
