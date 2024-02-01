@@ -8,7 +8,8 @@
     "java":"Java事例",
     "nextjs":"Nextjs事例",
     "react":"React事例",
-    "vue":"Vue事例"
+    "vue":"Vue事例",
+    "ntwo":"N2成績"
   },
   "info":{
     "name":"名前：",
@@ -19,5 +20,16 @@
     "selfassessment":"自己評価：",
     "certification":"クラウド認定：",
     "language":"言語機能："
+  },
+  "ntwo":{
+    "test_date":"受験日：",
+    "test_no":"受験番号：",
+    "grade":"レベル：",
+    "word_score":"言語知識：",
+    "reading_score":"読解：",
+    "listening_score":"聴解：",
+    "total_score":"総合得点：",
+    "word_grade":"語彙レベル：",
+    "grammer_grade":"文法レベル："
   }
 }
