@@ -1,6 +1,11 @@
 import * as React from 'react';
 import { Locale } from '@/i18n-config'
-import { TableContainer, Paper, Table, TableBody, TableRow, TableCell } from '@mui/material';
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableRow from '@mui/material/TableRow';
+import Paper from '@mui/material/Paper';
 import { getLocale } from '@/get-locale';
 
 export default async function Ntwo({
