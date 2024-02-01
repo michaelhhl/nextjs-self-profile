@@ -21,7 +21,7 @@ import ThemeRegistry from './components/ThemeRegistry/ThemeRegistry';
 import { Locale, i18n } from '@/i18n-config'
 import LocaleSwitcher from './components/LocaleSwitcher';
 import { getLocale } from '@/get-locale';
-import { AutoAwesomeMosaic, AutoAwesomeMotion, GridOn, Looks, SettingsVoice } from '@mui/icons-material';
+import { AutoAwesomeMosaic, AutoAwesomeMotion, GridOn, Looks, SettingsVoice, Translate } from '@mui/icons-material';
 
 export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }))
@@ -52,6 +52,7 @@ export default async function RootLayout({
     { text: dictionary.menu.nextjs, href: `/${params.lang}/nextjs`, icon: AutoAwesomeMotion },
     { text: dictionary.menu.react, href: `/${params.lang}/react`, icon: AutoAwesomeMosaic },
     { text: dictionary.menu.vue, href: `/${params.lang}/vue`, icon: GridOn },
+    { text: dictionary.menu.ntwo, href: `/${params.lang}/ntwo`, icon: Translate },
   ];
 
   return (
