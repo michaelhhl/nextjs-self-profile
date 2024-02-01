@@ -8,7 +8,8 @@
     "java":"Java案例",
     "nextjs":"Nextjs案例",
     "react":"React案例",
-    "vue":"Vue案例"
+    "vue":"Vue案例",
+    "ntwo":"N2成绩"
   },
   "info":{
     "name":"姓名：",
@@ -19,5 +20,16 @@
     "selfassessment":"自我评价：",
     "certification":"云认证：",
     "language":"语言能力："
+  },
+  "ntwo":{
+    "test_date":"考试日期：",
+    "test_no":"准考证号：",
+    "grade":"级别：",
+    "word_score":"语言知识单项分：",
+    "reading_score":"阅读单项分：",
+    "listening_score":"听力单项分：",
+    "total_score":"总分：",
+    "word_grade":"词汇参考级别：",
+    "grammer_grade":"语法参考级别："
   }
 }
