@@ -62,7 +62,7 @@ export default async function Home({
           </TableRow>
           <TableRow>
             <TableCell align="right" className='p-0 text-lg'>{dictionary.info.selfassessment}</TableCell>
-            <TableCell align="left" colSpan={3} className='p-0 text-lg'>{info.selfassessment}</TableCell>
+            <TableCell align="left" colSpan={3} className='p-0 text-lg'><pre>{info.selfassessment}</pre></TableCell>
           </TableRow>
         </TableBody>
       </Table>
