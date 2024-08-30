@@ -23,13 +23,13 @@ export default async function Ntwo({
                     <TableRow>
                         <TableCell align="right" className='p-0 text-lg'>{dictionary.ntwo.test_date}</TableCell>
                         <TableCell align="left" className='p-0 text-base'>
-                            2023/12/03
+                            2024/07/07
                         </TableCell>
                     </TableRow>
                     <TableRow>
                         <TableCell align="right" className='p-0 text-lg'>{dictionary.ntwo.test_no}</TableCell>
                         <TableCell align="left" className='p-0 text-base'>
-                            23B102040120135
+                            24A102040121989
                         </TableCell>
                     </TableRow>
                     <TableRow>
@@ -38,27 +38,27 @@ export default async function Ntwo({
                     </TableRow>
                     <TableRow>
                         <TableCell align="right" className='p-0 text-lg'>{dictionary.ntwo.word_score}</TableCell>
-                        <TableCell align="left" className='p-0 text-lg'>30</TableCell>
+                        <TableCell align="left" className='p-0 text-lg'>31</TableCell>
                     </TableRow>
                     <TableRow>
                         <TableCell align="right" className='p-0 text-lg'>{dictionary.ntwo.reading_score}</TableCell>
-                        <TableCell align="left" className='p-0 text-lg'>29</TableCell>
+                        <TableCell align="left" className='p-0 text-lg'>43</TableCell>
                     </TableRow>
                     <TableRow>
                         <TableCell align="right" className='p-0 text-lg'>{dictionary.ntwo.listening_score}</TableCell>
-                        <TableCell align="left" className='p-0 text-lg'>25</TableCell>
+                        <TableCell align="left" className='p-0 text-lg'>28</TableCell>
                     </TableRow>
                     <TableRow>
                         <TableCell align="right" className='p-0 text-lg'>{dictionary.ntwo.total_score}</TableCell>
-                        <TableCell align="left" className='p-0 text-lg'>84</TableCell>
+                        <TableCell align="left" className='p-0 text-lg'>102</TableCell>
                     </TableRow>
                     <TableRow>
                         <TableCell align="right" className='p-0 text-lg'>{dictionary.ntwo.word_grade}</TableCell>
-                        <TableCell align="left" className='p-0 text-lg'>B</TableCell>
+                        <TableCell align="left" className='p-0 text-lg'>A</TableCell>
                     </TableRow>
                     <TableRow>
                         <TableCell align="right" className='p-0 text-lg'>{dictionary.ntwo.grammer_grade}</TableCell>
-                        <TableCell align="left" className='p-0 text-lg'>A</TableCell>
+                        <TableCell align="left" className='p-0 text-lg'>B</TableCell>
                     </TableRow>
                 </TableBody>
             </Table>
