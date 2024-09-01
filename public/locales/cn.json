@@ -30,6 +30,8 @@
     "listening_score":"听力单项分：",
     "total_score":"总分：",
     "word_grade":"词汇参考级别：",
-    "grammer_grade":"语法参考级别："
+    "grammer_grade":"语法参考级别：",
+    "pass_fail":"是否合格：",
+    "passed":"合格"
   }
 }
