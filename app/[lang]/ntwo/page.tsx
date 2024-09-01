@@ -60,6 +60,10 @@ export default async function Ntwo({
                         <TableCell align="right" className='p-0 text-lg'>{dictionary.ntwo.grammer_grade}</TableCell>
                         <TableCell align="left" className='p-0 text-lg'>B</TableCell>
                     </TableRow>
+                    <TableRow>
+                        <TableCell align="right" className='p-0 text-lg'>{dictionary.ntwo.pass_fail}</TableCell>
+                        <TableCell align="left" className='p-0 text-lg'>{dictionary.ntwo.passed}</TableCell>
+                    </TableRow>
                 </TableBody>
             </Table>
         </TableContainer>
