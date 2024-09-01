@@ -30,6 +30,8 @@
     "listening_score":"聴解：",
     "total_score":"総合得点：",
     "word_grade":"語彙レベル：",
-    "grammer_grade":"文法レベル："
+    "grammer_grade":"文法レベル：",
+    "pass_fail":"合否：",
+    "passed":"合格"
   }
 }
