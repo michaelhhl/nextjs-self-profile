@@ -13,8 +13,8 @@
   },
   "info":{
     "name":"名前：",
-    "mobile":"電話番号：",
-    "email":"Eメール：",
+    "mobile":"携帯電話：",
+    "email":"E-mail：",
     "education":"最終学歴：",
     "skills":"主要スキル：",
     "selfassessment":"自己評価：",
