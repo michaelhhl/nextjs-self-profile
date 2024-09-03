@@ -54,7 +54,7 @@ export default async function Home({
           </TableRow>
           <TableRow>
             <TableCell align="right" className='p-0 text-lg'>{dictionary.info.skills}</TableCell>
-            <TableCell align="left" colSpan={3} className='p-0 text-base'>
+            <TableCell align="left" colSpan={3} className='p-0 text-base' style={{ padding: '0px' }}>
               {
                 (lang === 'cn') && (
                   <Table>
