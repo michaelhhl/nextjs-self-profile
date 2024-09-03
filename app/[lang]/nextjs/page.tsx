@@ -58,7 +58,7 @@ export default async function WorkHistoryPage({
                     (lang === 'jp') && (
                         <>
                             <Typography variant="h6" gutterBottom>
-                                1.このプロジェクトは、Nextjsフレームワークの実装に基づいています。
+                                1.このプロジェクトは、Nextjsフレームワークの実装に基づく
                             </Typography>
                             <Typography variant="h6" gutterBottom>
                                 2.ルーティングを実現するアプリ・ルーターに基づく
