@@ -15,7 +15,7 @@ export default async function WorkHistoryPage({
     params: { lang: Locale }
 }>) {
 
-    const title = lang === 'cn' ? '管理系统' : '管理体制'
+    const title = lang === 'cn' ? '管理系统' : '管理システム'
     return (
         <Container>
             <Box
@@ -78,16 +78,16 @@ export default async function WorkHistoryPage({
                                 2.パッケージングAxios、Httpリクエスト/レスポンスインターセプションの実装、カスタムget、postリクエストメソッド
                             </Typography>
                             <Typography variant="h6" gutterBottom>
-                                3.カスタムルーターを通して、メニュー機能を実現する
+                                3.カスタムルーターを通して、メニュー機能を実現
                             </Typography>
                             <Typography variant="h6" gutterBottom>
-                                4.SpringBoot＋Mybatisをベースに、フロントエンドのコールAPIを実現。
+                                4.SpringBoot＋Mybatisをベースに、フロントエンドのコールAPIを実現
                             </Typography>
                             <Typography variant="h6" gutterBottom>
                                 5.SpringSecurity＋oauth2＋JWTによるユーザー認証
                             </Typography>
                             <Typography variant="h6" gutterBottom>
-                                6.APIのリクエスト・レスポンスをインターセプトし、レスポンスのデータ・フォーマットを統一する。
+                                6.APIのリクエスト・レスポンスをインターセプトし、レスポンスのデータ・フォーマットを統一
                             </Typography>
                         </>
                     )
