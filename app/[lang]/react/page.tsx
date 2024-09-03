@@ -62,7 +62,7 @@ export default async function WorkHistoryPage({
                                 3.i18nextをベースに日本語／中国語の切り替えを実現
                             </Typography>
                             <Typography variant="h6" gutterBottom>
-                                4.カスタムルーターを通して、メニュー機能を実現する
+                                4.カスタムルーターを通して、メニュー機能を実現
                             </Typography>
                             <Typography variant="h6" gutterBottom>
                                 5.SpringBoot＋MybatisをベースにフロントエンドのコールAPIを実現
