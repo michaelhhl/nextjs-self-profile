@@ -55,30 +55,62 @@ export default async function Home({
           <TableRow>
             <TableCell align="right" className='p-0 text-lg'>{dictionary.info.skills}</TableCell>
             <TableCell align="left" colSpan={3} className='p-0 text-base'>
-              <Table>
-                <TableBody>
-                  <TableRow>
-                    <TableCell align="left" className='p-0 text-base'>Java / Spring / Spring Boot / Spring Cloud</TableCell>
-                    <TableCell align="left" className='p-0 text-base'>10年</TableCell>
-                    <TableCell align="left" className='p-0 text-base'>通常使用に問題なしで、指導も可能</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell align="left" className='p-0 text-base'>React / Vue / Nextjs / Typescript / Javascript</TableCell>
-                    <TableCell align="left" className='p-0 text-base'>5年</TableCell>
-                    <TableCell align="left" className='p-0 text-base'>通常使用に問題なしで、指導も可能</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell align="left" className='p-0 text-base'>Oracle / MySQL / SQL Server / PostgreSQL</TableCell>
-                    <TableCell align="left" className='p-0 text-base'>5年</TableCell>
-                    <TableCell align="left" className='p-0 text-base'>通常使用に問題なし</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell align="left" className='p-0 text-base'>AWS / Azure / Docker / Git / VBA / Shell / Mybatis / Redis / RocketMQ</TableCell>
-                    <TableCell align="left" className='p-0 text-base'>3年</TableCell>
-                    <TableCell align="left" className='p-0 text-base'>通常使用に問題なし</TableCell>
-                  </TableRow>
-                </TableBody>
-              </Table>
+              {
+                (lang === 'cn') && (
+                  <Table>
+                    <TableBody>
+                      <TableRow>
+                        <TableCell align="left" className='p-0 text-base'>Java/Spring/Spring Boot/Spring Cloud</TableCell>
+                        <TableCell align="left" className='p-0 text-base'>10年</TableCell>
+                        <TableCell align="left" className='p-0 text-base'>精通，可提供指导</TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell align="left" className='p-0 text-base'>React/Vue/Nextjs/Typescript/Javascript</TableCell>
+                        <TableCell align="left" className='p-0 text-base'>5年</TableCell>
+                        <TableCell align="left" className='p-0 text-base'>精通，可提供指导</TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell align="left" className='p-0 text-base'>Oracle/MySQL/SQL Server/PostgreSQL</TableCell>
+                        <TableCell align="left" className='p-0 text-base'>5年</TableCell>
+                        <TableCell align="left" className='p-0 text-base'>良好</TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell align="left" className='p-0 text-base'>AWS/Azure/Docker/Git/VBA/Shell/Mybatis/Redis/RocketMQ</TableCell>
+                        <TableCell align="left" className='p-0 text-base'>3年</TableCell>
+                        <TableCell align="left" className='p-0 text-base'>良好</TableCell>
+                      </TableRow>
+                    </TableBody>
+                  </Table>
+                )
+              }
+              {
+                (lang === 'jp') && (
+                  <Table>
+                    <TableBody>
+                      <TableRow>
+                        <TableCell align="left" className='p-0 text-base'>Java/Spring/Spring Boot/Spring Cloud</TableCell>
+                        <TableCell align="left" className='p-0 text-base'>10年</TableCell>
+                        <TableCell align="left" className='p-0 text-base'>通常使用に問題なしで、指導も可能</TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell align="left" className='p-0 text-base'>React/Vue/Nextjs/Typescript/Javascript</TableCell>
+                        <TableCell align="left" className='p-0 text-base'>5年</TableCell>
+                        <TableCell align="left" className='p-0 text-base'>通常使用に問題なしで、指導も可能</TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell align="left" className='p-0 text-base'>Oracle/MySQL/SQL Server/PostgreSQL</TableCell>
+                        <TableCell align="left" className='p-0 text-base'>5年</TableCell>
+                        <TableCell align="left" className='p-0 text-base'>通常使用に問題なし</TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell align="left" className='p-0 text-base'>AWS/Azure/Docker/Git/VBA/Shell/Mybatis/Redis/RocketMQ</TableCell>
+                        <TableCell align="left" className='p-0 text-base'>3年</TableCell>
+                        <TableCell align="left" className='p-0 text-base'>通常使用に問題なし</TableCell>
+                      </TableRow>
+                    </TableBody>
+                  </Table>
+                )
+              }
             </TableCell>
           </TableRow>
           <TableRow>
