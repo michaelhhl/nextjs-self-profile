@@ -1,6 +1,6 @@
 [
     {
-      "title": "2022/10--2023/02：Kubota",
+      "title": "2022/10--2023/10：Kubota",
       "responsibility": "实现画面入口的账票打印功能，分Excel和Pdf2种类型文件下载。前后端分离，前端Vue+Typescript，后端Java+SpringBoot。!@#1.实现基于Vue+Typescript的账票显示及设定画面。!@#2.实现账票的上传和单文件/多文件下载。!@#3.实现基于IOC机制封装账票业务Service类。"
     },
     {
