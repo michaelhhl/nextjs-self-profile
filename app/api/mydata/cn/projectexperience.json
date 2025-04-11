@@ -1,5 +1,9 @@
 [
     {
+      "title": "2024/01--2024/08：cFund Library",
+      "responsibility": "实现用户信息，文档，聊天记录等在公司内部共享的系统。通过各种检索条件，快速找到目标信息，以打破公司内信息茧房的壁垒。!@#1.使用React+Javascript实现前端组件：基于AXIOS的HTTP请求、路由、异常处理、屏幕布局等。!@#2.上传 Doc 或 PDF 文件并将其传输并保存到 pdfbox。同时，文件信息被加载到ElasticSearch中。!@#3.实现了用户注册画面和搜索列表画面。"
+    },
+    {
       "title": "2022/10--2023/10：Kubota",
       "responsibility": "实现画面入口的账票打印功能，分Excel和Pdf2种类型文件下载。前后端分离，前端Vue+Typescript，后端Java+SpringBoot。!@#1.实现基于Vue+Typescript的账票显示及设定画面。!@#2.实现账票的上传和单文件/多文件下载。!@#3.实现基于IOC机制封装账票业务Service类。"
     },
